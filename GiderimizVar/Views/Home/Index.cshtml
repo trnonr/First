@@ -3,58 +3,12 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Layout/_HomeLayout.cshtml";
 }
-<script src="https://www.koddostu.com/duzelt.js?no=109"></script>
-<style>
-    .dugme {
-        cursor: pointer;
-        display: inline-block;
-        padding: 5px 10px;
-        background: #eee;
-        border: 1px solid #d8d8d8;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #444;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-    }
+<link rel="stylesheet" href="~/Content/dist/css/jquery.mobile-1.4.2.min.css" />
 
-    [name="kapat"] {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-    }
+<script type="text/javascript" src="/Content/dist/js/jquery-1.9.1.js"></script>
 
-    .pencere {
-        position: fixed;
-        top: -50%;
-        left: -50%;
-        width: 380px;
-        height: 280px;
-        background: #fff;
-        box-shadow: 0 0 6px 2px rgba(0,0,0,0.4);
-        opacity: 0;
-        transition: opacity 0.6s ease-out;
-        z-index: -1;
-        padding: 10px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        margin: -150px 0 0 -200px;
-    }
+<script type="text/javascript" src="/Content/dist/js/jquery.mobile-1.4.2.min.js"></script>
 
-    .Pencereac {
-        width: 1px;
-        height: 1px;
-        visibility: hidden;
-    }
-
-        .Pencereac:checked + .pencere {
-            top: 50%;
-            left: 50%;
-            display: block;
-            z-index: 9;
-            opacity: 1;
-        }
-</style>
    <!-- /.row -->
     <div class="row">
 
@@ -91,28 +45,31 @@
 
             </div>
         </div>
-
         <div class="giderbtn">
-            
-            <div id="pencerekodu">
-                <label for="pencere" class="dugme">Gelir Ekle</label>
-                <input type="checkbox" class="Pencereac" id="pencere" name="pencere"></input>
-                <label class="pencere">
-                    Gelir
-                    <label for="pencere" class="dugme" name="kapat">Kapat</label>
-                </label>
+            <a href="#p1" data-role="button" data-inline="true" data-icon="plus" data-rel="popup" data-transition="pop">Gelir Ekle</a>
+            <a href="#p2" data-role="button" data-inline="true" data-icon="minus" data-rel="popup" data-transition="pop">Gider Ekle</a>
+
+            <div data-role="popup" id="p1" class="ui-content " data-overlay-theme="b" data-arrow="true" data-position-to="window">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+                <div>
+                    <div>Gelir Adı: <input id="geliradi" type="text" /></div><br />
+                    <div>Hesap Seçin: </div>
+                        <select class="form-control" id="hesapturu" name="HesapTuru">
+                                <option>Seçiniz</option>
+                                <option>Nakit</option>
+                                <option>Maaş</option>
+                                
+                        </select>
+                    <div>Miktar: </div><input id="miktar" type="text" />
+                    <div>Tarih: </div><input id="tarih" type="date"/>
+                    <input id="kaydet" type="button" value="Kaydet" class="btn btn-primary"/>
+                </div>
+            </div>
+            <div data-role="popup" id="p2" class="ui-content" data-overlay-theme="b" data-arrow="true" data-position-to="window">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+
             </div>
 
-                <div id="pencerekodu">
-                    <label for="pencere" class="dugme">Gider Ekle</label>
-                    <input type="checkbox" class="Pencereac" id="pencere2" name="pencere2"></input>
-                    <label class="pencere">
-                        Gider
-                        <label for="pencere" class="dugme" name="kapat">Kapat</label>
-                    </label>
-                </div>
-            
-            </div>
         </div>
     <!-- /.row -->
     <div class="row">
@@ -165,7 +122,7 @@
         <!-- /.row -->
     </div>
     <!-- /#page-wrapper -->
-
+        </div>
 
 
 

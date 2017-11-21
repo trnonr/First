@@ -90,8 +90,11 @@
   <ItemGroup>
     <Content Include="Content\data\flot-data.js" />
     <Content Include="Content\data\morris-data.js" />
+    <Content Include="Content\dist\css\jquery.mobile-1.4.2.min.css" />
     <Content Include="Content\dist\css\sb-admin-2.css" />
     <Content Include="Content\dist\css\sb-admin-2.min.css" />
+    <Content Include="Content\dist\js\jquery-1.9.1.js" />
+    <Content Include="Content\dist\js\jquery.mobile-1.4.2.min.js" />
     <Content Include="Content\dist\js\sb-admin-2.js" />
     <Content Include="Content\dist\js\sb-admin-2.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
